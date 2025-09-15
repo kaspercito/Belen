@@ -3,37 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>¡Cielo de Estrellas para Belencita! 🌟💜</title>
+  <title>¡Sorpresa Bacán para Belencita! 💜</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <div id="stars-game" class="container">
-    <h1>¡Belencita, atrapá las estrellas! 🌌🥗</h1>
-    <p>¡Qué chévere fue ver la peli, pana! 😎 Hice este cielo morado para vos. Tocá las estrellas y descubrí mensajes bacanes. ¡A ver cuántos encontrás!</p>
-    
-    <div class="stars-container">
-      <div class="star" onclick="showMessage(1)" id="star-1">🌟</div>
-      <div class="star" onclick="showMessage(2)" id="star-2">🌟</div>
-      <div class="star" onclick="showMessage(3)" id="star-3">🌟</div>
-      <div class="star" onclick="showMessage(4)" id="star-4">🌟</div>
-      <div class="star" onclick="showMessage(5)" id="star-5">🌟</div>
-    </div>
-    
-    <div id="message-1" class="message hidden">¡Esta estrella dice que tu vibe morada es puro fuego! 🔥💜</div>
-    <div id="message-2" class="message hidden">¡Sos la reina de los snacks veggies! ¿Hummus o guacamole? 🥑</div>
-    <div id="message-3" class="message hidden">¡Tu energía es como un mate bien cebado, siempre levanta el ánimo! 🧉</div>
-    <div id="message-4" class="message hidden">¡Esta estrella brilla por nuestra amistad, siempre bacán! 😊</div>
-    <div id="message-5" class="message hidden">¡Tu amor por el morado ilumina todo, pana! ✨</div>
-    
-    <p class="teaser">Pst... ¡algo bacán llega mañana a medianoche (hora tuya)! ¡Volvé a ver! 😏</p>
+  <div id="initial" class="container">
+    <h1>¡Belencita, qué chévere la peli! 🎥🥗</h1>
+    <p>¡Pana, fue bacán compartir ese momento contigo! 😎 Preparé algo más, pero presiona este botón para verlo. ¡Va a ser re lindo!</p>
+    <button onclick="revealSurprise()">¡Presiona para la Sorpresa Bacán! ✨</button>
   </div>
 
-  <div id="birthday" class="container hidden">
-    <h1>¡Feliz Cumpleaños, Belencita! 🎉💜</h1>
-    <p>¡Llegó tu día, pana! 🎂 Sos una persona súper especial, con un brillo morado que ilumina todo. Nuestra amistad es lo más chévere, y estoy feliz de compartir este momento. Que este año venga con snacks veggies, buena onda y puras alegrías. 🥗✨ ¡Sos increíble!</p>
-    <button onclick="launchConfetti()">¡Lanzar Confeti Morado! 🎊</button>
-    <a href="discord://-" target="_blank"><button>¡Mirá Discord por más sorpresas!</button></a>
+  <div id="birthday-message" class="hidden">
+    <div class="container">
+      <h1 class="fade-in">¡Feliz Cumpleaños, Belencita! 🎉💜🇦🇷</h1>
+      <p class="fade-in delay-1">¡Llegó tu día, pana! 🎂 Sos una persona única, con un brillo morado que ilumina todo. Estoy re feliz de que hayamos vuelto a hablar, y que puedas confiar en mí como antes. Me hace sentir chévere saber que estoy para vos siempre, en las buenas y malas. 🧉🌱</p>
+      <p class="fade-in delay-2">Hoy hubiéramos cumplido otro año juntos en relación, pero bueno... la vida dio vueltas. Terminamos en octubre, y en diciembre me dijiste que estabas con mi amigo, sin importarte mucho. Me dolió un montón en ese momento, pero ahora valoro que fuéramos honestos. Hemos pasado por tanto, y mirá, aquí estamos, con una amistad bonita de nuevo.</p>
+      <p class="fade-in delay-3">Se me hace difícil no poder expresarme como me gustaría, con todo el amor que te tengo aún. Pero respeto tu espacio y nuestra conexión actual. Solo quiero que sepas que sos especial para mí, y que este cumpleaños sea lleno de vibes moradas, snacks veggies y puras alegrías. ¡Brillá como siempre, Belencita! 😊</p>
+      <button onclick="launchConfetti()" class="fade-in delay-4">¡Lanzar Confeti Morado! 🎊</button>
+      <a href="discord://-" target="_blank"><button class="fade-in delay-4">¡Volvé a Discord por más!</button></a>
+    </div>
   </div>
 
   <script src="script.js"></script>
