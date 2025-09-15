@@ -8,21 +8,22 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
 </head>
 <body>
+  <div class="stars-background"></div>
   <div id="initial" class="container">
     <h1>¡Belencita, qué chévere la peli! 🎥🥗</h1>
-    <p>¡Pana, fue bacán compartir ese momento contigo! 😎 Preparé algo más, pero presiona este botón para verlo. ¡Va a ser re lindo!</p>
-    <button onclick="revealSurprise()">¡Presiona para la Sorpresa Bacán! ✨</button>
+    <p>¡Pana, fue re bacán compartir ese momentazo contigo! 😎 Preparé algo súper especial, pero tenés que esperar un poquito. Mirá la cuenta regresiva y cuando llegue a cero, tocá el botón para la sorpresa. ¡Va a ser pura magia!</p>
+    <div id="countdown" class="countdown">Cargando...</div>
+    <button id="surprise-button" disabled onclick="revealSurprise()">¡Ver Sorpresa! ✨</button>
+    <p id="wait-message" class="hidden wait-message">¡Aún no, pana! Esperá a que la cuenta llegue a cero 😏</p>
   </div>
 
-  <div id="birthday-message" class="hidden">
-    <div class="container">
-      <h1 class="fade-in">¡Feliz Cumpleaños, Belencita! 🎉💜🇦🇷</h1>
-      <p class="fade-in delay-1">¡Llegó tu día, pana! 🎂 Sos una persona única, con un brillo morado que ilumina todo. Estoy re feliz de que hayamos vuelto a hablar, y que puedas confiar en mí como antes. Me hace sentir chévere saber que estoy para vos siempre, en las buenas y malas. 🧉🌱</p>
-      <p class="fade-in delay-2">Hoy hubiéramos cumplido otro año juntos en relación, pero bueno... la vida dio vueltas. Terminamos en octubre, y en diciembre me dijiste que estabas con mi amigo, sin importarte mucho. Me dolió un montón en ese momento, pero ahora valoro que fuéramos honestos. Hemos pasado por tanto, y mirá, aquí estamos, con una amistad bonita de nuevo.</p>
-      <p class="fade-in delay-3">Se me hace difícil no poder expresarme como me gustaría, con todo el amor que te tengo aún. Pero respeto tu espacio y nuestra conexión actual. Solo quiero que sepas que sos especial para mí, y que este cumpleaños sea lleno de vibes moradas, snacks veggies y puras alegrías. ¡Brillá como siempre, Belencita! 😊</p>
-      <button onclick="launchConfetti()" class="fade-in delay-4">¡Lanzar Confeti Morado! 🎊</button>
-      <a href="discord://-" target="_blank"><button class="fade-in delay-4">¡Volvé a Discord por más!</button></a>
-    </div>
+  <div id="birthday-message" class="container hidden">
+    <h1 class="fade-in">¡Feliz Cumpleaños, Belencita! 🎉💜</h1>
+    <p class="fade-in delay-1">¡Llegó tu día, pana! 🎂 Sos una persona súper especial, con un brillo morado que ilumina todo. Estoy re contento de que hayamos vuelto a hablar, de que confíes en mí otra vez. Me hace feliz saber que estoy para vos siempre, en las buenas y en las malas. 🧉🌱</p>
+    <p class="fade-in delay-2">Hoy hubiéramos cumplido otro año juntos como pareja, ¿te acordás? Pero la vida dio sus vueltas: terminamos en octubre, y en diciembre me contaste lo de mi amigo, así sin filtro. Dolió un montón en ese momento, pero ahora valoro que fuéramos honestos. Mirá dónde estamos: con una amistad chévere que me llena el corazón.</p>
+    <p class="fade-in delay-3">A veces quisiera expresarme con todo el amor que siento por vos, pero sé que ahora somos amigos, y respeto tu espacio. Solo quiero que sepas que sos increíble, y que este cumpleaños sea puro brillo, con snacks veggies, vibes moradas y toda la felicidad del mundo. ¡Sos lo más, Belencita! 😊</p>
+    <button onclick="launchConfetti()" class="fade-in delay-4">¡Lanzar Confeti Morado! 🎊</button>
+    <a href="discord://-" target="_blank"><button class="fade-in delay-4">¡Volvé a Discord por más!</button></a>
   </div>
 
   <script src="script.js"></script>
