@@ -54,6 +54,6 @@ function launchConfetti() {
     particleCount: 150,
     spread: 80,
     origin: { y: 0.6 },
-    colors: ['#4b0082', '#8b008b', '#000000', '#d8bfd8'] // Morados y negro
+    colors: ['#4b0082', '#8b008b', '#000000', '#d8bfd8']
   });
 }
