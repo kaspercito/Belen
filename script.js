@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("DOM cargado, iniciando cuenta regresiva");
 
-  const birthdayDate = new Date('2025-09-15T18:50:00Z'); // 13:50 ECT (UTC-5)
+  const birthdayDate = new Date('2025-09-16T03:00:00Z'); // 00:00 ARG / 22:00 ECT
   const countdownElement = document.getElementById('countdown');
   const surpriseButton = document.getElementById('surprise-button');
   const waitMessage = document.getElementById('wait-message');
