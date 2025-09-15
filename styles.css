@@ -1,11 +1,12 @@
 body {
   font-family: 'Arial', sans-serif;
-  background: #000000; /* Fondo negro para cielo nocturno */
+  background: linear-gradient(to bottom, #000000, #4b0082); /* Negro a morado */
   color: #e6e6fa; /* Lavanda claro */
   text-align: center;
   padding: 30px;
   margin: 0;
-  overflow: hidden;
+  min-height: 100vh; /* Asegura scroll si es larga */
+  overflow-y: auto; /* Corrige el fallo: permite scroll */
 }
 
 .container {
@@ -13,7 +14,7 @@ body {
   margin: 0 auto;
   padding: 30px;
   border-radius: 20px;
-  background: rgba(0, 0, 0, 0.9); /* Negro semi-transparente */
+  background: rgba(0, 0, 0, 0.85); /* Negro semi-transparente */
   box-shadow: 0 4px 20px rgba(75, 0, 130, 0.6); /* Sombra morada */
 }
 
@@ -23,76 +24,46 @@ h1 {
   color: #d8bfd8; /* Morado claro */
   font-size: 2.8em;
   margin-bottom: 25px;
-  text-shadow: 0 0 10px rgba(139, 0, 139, 0.7); /* Glow morado */
+  text-shadow: 0 0 10px rgba(139, 0, 139, 0.5); /* Glow morado */
 }
 
 p {
   font-size: 1.2em;
   line-height: 1.6;
   color: #d3d3d3;
-}
-
-.stars-container {
-  position: relative;
-  height: 300px;
-  margin: 20px 0;
-}
-
-.star {
-  position: absolute;
-  font-size: 2em;
-  cursor: pointer;
-  color: #dda0dd; /* Morado claro */
-  text-shadow: 0 0 10px rgba(139, 0, 139, 0.8);
-  animation: twinkle 2s infinite alternate;
-}
-
-.star:hover {
-  transform: scale(1.2);
-  color: #8b008b;
-}
-
-#star-1 { top: 20%; left: 15%; }
-#star-2 { top: 60%; left: 30%; }
-#star-3 { top: 30%; left: 60%; }
-#star-4 { top: 70%; left: 70%; }
-#star-5 { top: 40%; left: 85%; }
-
-@keyframes twinkle {
-  0% { opacity: 0.7; }
-  100% { opacity: 1; }
-}
-
-.message {
-  margin: 15px auto;
-  padding: 10px;
-  background: rgba(75, 0, 130, 0.3); /* Fondo morado suave */
-  border-radius: 10px;
-  max-width: 600px;
-  font-style: italic;
-  color: #dda0dd;
-}
-
-.teaser {
-  font-style: italic;
-  color: #dda0dd; /* Morado claro */
-  margin-top: 30px;
-  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
 button {
   background: #4b0082; /* Morado oscuro */
   color: #ffffff;
   border: 2px solid #8b008b;
-  padding: 12px 25px;
+  padding: 15px 30px;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 1.1em;
+  font-size: 1.2em;
   transition: all 0.3s ease;
+  margin: 15px;
 }
 
 button:hover {
   background: #8b008b;
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(139, 0, 139, 0.7);
+}
+
+/* Animaciones fade-in */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-in forwards;
+}
+
+.delay-1 { animation-delay: 1s; }
+.delay-2 { animation-delay: 2s; }
+.delay-3 { animation-delay: 3s; }
+.delay-4 { animation-delay: 4s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
