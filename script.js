@@ -19,8 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-      countdownElement.innerText = `Días: ${days}, Horas: ${hours}, Minutos: ${minutes}, Segundos: ${seconds} para el primer momento chévere`;
-      initialMessage.innerText = "¡Pana, estoy re feliz de estar con vos y mi hermana hoy! 😎 Algo súper especial viene en camino, pero primero mirá esta cuenta regresiva hasta las 18:00. ¡Preparate para la magia!";
+      countdownElement.innerText = `Días: ${days}, Horas: ${hours}, Minutos: ${minutes}, Segundos: ${seconds}.`;
+      initialMessage.innerText = "¡Estoy re feliz! 😎 Algo súper especial viene en camino, pero primero mirá esta cuenta regresiva hasta las 18:00. ¡Preparate para la magia!";
     } else if (now < birthdayDate) {
       // Segunda cuenta regresiva hasta 00:00 ARG
       timeLeft = birthdayDate - now;
@@ -28,14 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-      countdownElement.innerText = `Días: ${days}, Horas: ${hours}, Minutos: ${minutes}, Segundos: ${seconds} para la sorpresa final`;
-      initialMessage.innerText = "¡Pana, ya estamos más cerca! 😏 Seguí esta cuenta hasta medianoche para la gran sorpresa. ¡Va a ser puro brillo!";
+      countdownElement.innerText = `Días: ${days}, Horas: ${hours}, Minutos: ${minutes}, Segundos: ${seconds} para que la página se duerma.`;
+      initialMessage.innerText = "¡Ya estamos más cerca! 😏 Seguí esta cuenta hasta medianoche para la gran sorpresa.";
     } else {
       // Cuenta regresiva terminada, botón habilitado
       countdownElement.innerText = "¡Ya es la hora!";
       surpriseButton.disabled = false;
       surpriseButton.style.cursor = 'pointer';
-      initialMessage.innerText = "¡Pana, llegó el momento! 😎 Tocá el botón para ver la sorpresa. ¡Es pura magia!";
+      initialMessage.innerText = "¡Llegó el momento! 😎 Tocá el botón para ver la sorpresa.";
       clearInterval(countdownInterval);
     }
   }
